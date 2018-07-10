@@ -2,7 +2,7 @@ import stanford.karel.*;
 
 public class CollectNewspaper extends Karel {
 	
-	public void run(){
-		// your code here..
+	public void run() {
+		// your code here
 	}
 }
