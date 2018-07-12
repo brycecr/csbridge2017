@@ -48,6 +48,7 @@
 	      <ul class="nav navbar-nav">
 	        <!--<li ><a href="#">Link</a></li>-->
 	        <li class="dropdown">
+
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Handouts <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
 	          	<!--<li><a href="../../en/handouts/sections.html">Sections</a></li>-->
@@ -56,6 +57,7 @@
 	          	<li><a href="../../en/handouts/console.html">Console Reference</a></li>
 	          	<li><a href="../../en/handouts/random.html">Random Generator Reference</a></li>
 	          	<li><a href="../../en/handouts/graphics.html">Graphics Reference</a></li>
+			<li><a href="../../en/handouts/operations.html">Variable Scope</a></li>
 	          	<!--
 	          	<!--
 	          	<li><a href="../../en/handouts/events.html">Events Reference</a></li>
@@ -340,12 +342,12 @@
 				</p>
 				<pre id="editor" style="height:200px">public class AnExample extends ConsoleProgram {
 
-	public void methodOne {
+	private void methodOne {
 		int a = readInt("Enter a: ");
 		println("a = " + a);
  	}
 
-	public void methodTwo {
+	private void methodTwo {
 		int b = a;  // BUG!: cannot refer to variable a in methodOne
 		println("b = " + b);
 	}
@@ -367,7 +369,7 @@
 				<p>Consider the following example:</p>
 				<pre id="editor2" style="height:400px">public class AnExample extends ConsoleProgram {
 	
-	public void methodThree {
+	private void methodThree {
 		int a = 4;
 
  	 	for (int i = 0; i &lt; 5; i++) {
